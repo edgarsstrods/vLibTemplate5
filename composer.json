@@ -1,0 +1,23 @@
+{
+    "name": "redbird/vlib-template5",
+    "description": "Updated legacy tempating engine vLibTemplate package for use in PHP8+",
+    "type": "library",
+    "keywords": ["vLib","vLibTemplate"],
+    "homepage": "https://github.com/edgarsstrods/vLibTemplate5",
+    "version": "5.0.0",
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "Artistic-2.0 license",
+    "autoload": {
+        "psr-4": {
+            "Redbird\\vlib5\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edgars Strods",
+            "email": "edgars@redbird.lv"
+        }
+    ]
+}
