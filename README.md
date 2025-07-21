@@ -80,15 +80,10 @@ use Redbird\vlib5\vlibTemplate;
 
 require ('/vendor/autoload.php');
 
-try {
-    vlibIni::setup([
-        'TEMPLATE_DIR' => '/path/to/templates/', //this is mandatory - change for the place templates are stored
-        'CACHE_DIRECTORY' => '/paths/to/cache/vlib/', //used when vLibTemplateCache is used
-        //... See src/vlibIni.php source for all options
-    ]);
-} catch (Exception $e) {
-    die($e->getMessage()); // Please implement correct error handling in your app, this is for dementration
-}
+vlibIni::setup([
+    'TEMPLATE_DIR' => '/path/to/templates/', //change for the place templates are stored
+    //... See src/vlibIni.php source for all options
+]);
 
 $tmpl = new vlibTemplate('template.html');
 $tmpl->setVar('name','Test Name');
