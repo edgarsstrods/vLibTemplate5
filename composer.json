@@ -8,7 +8,7 @@
     "require": {
         "php": ">=8.0"
     },
-    "license": "Artistic-2.0 license",
+    "license": "Artistic-2.0",
     "autoload": {
         "psr-4": {
             "Redbird\\vlib5\\": "src/"
