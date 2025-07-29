@@ -4,7 +4,6 @@
     "type": "library",
     "keywords": ["vLib","vLibTemplate"],
     "homepage": "https://github.com/edgarsstrods/vLibTemplate5",
-    "version": "5.0.1",
     "require": {
         "php": ">=8.0"
     },
