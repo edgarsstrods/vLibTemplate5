@@ -1276,8 +1276,7 @@ class vlibTemplate
         // return correct string (tag dependent)
         switch ($tag) {
             case 'var':
-                $escape = (!empty($this->OPTIONS['DEFAULT_ESCAPE']) && strtolower($this->OPTIONS['DEFAULT_ESCAPE']) != 'none') ? strtolower($this->OPTIONS['DEFAULT_ESCAPE']) : null;
-
+                $escape = (empty($escape) && !empty($this->OPTIONS['DEFAULT_ESCAPE']) && strtolower($this->OPTIONS['DEFAULT_ESCAPE']) != 'none') ? strtolower($this->OPTIONS['DEFAULT_ESCAPE']) : null;
                 return '<?php ' . $this->_parseVar($wholetag, ($var??null), $escape, ($format ?? null), ($namespace??null) ). ' ?>';
 
             case 'if':
