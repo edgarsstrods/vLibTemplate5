@@ -992,7 +992,7 @@ class vlibTemplate
                 foreach ($arr[$i] as $k => $v) {
                     unset($arr[$i][$k]);
                     if ($this->OPTIONS['CASELESS']) $k = strtolower($k);
-                    if (preg_match('/^[0-9]+$/', $k)) $k = '_' . $k;
+                    if (preg_match('/^[0-9]+$/', (string) $k)) $k = '_' . $k;
 
                     if (is_array($v)) {
                         if (($arr[$i][$k] = $this->_arrayBuild($v)) == false) return false;
