@@ -1176,7 +1176,7 @@ class vlibTemplate
         $retstr .= 'print(' . $beforevar . $var1 . $aftervar . '); ';
         $retstr .= '}';
 
-        if (@$var2) {
+        if (isset($var2)) {
             $retstr .= ' elseif (' . $var2 . ' !== null) { ';
             $retstr .= 'print(' . $beforevar . $var2 . $aftervar . '); ';
             $retstr .= '}';
