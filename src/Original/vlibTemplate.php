@@ -217,7 +217,7 @@ class vlibTemplate
             }
             return true;
         }
-        elseif (preg_match('/^[A-Za-z_]+[A-Za-z0-9_]*$/', $k) && $v !== null) {
+        elseif (is_string($k) && preg_match('/^[A-Za-z_]+[A-Za-z0-9_]*$/', $k) && $v !== null) {
 
             if ($this->OPTIONS['CASELESS']) $k = strtolower($k);
             {
