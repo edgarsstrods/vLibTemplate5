@@ -316,7 +316,7 @@ class vlibTemplate
      */
     public function setLoop($k, $v) : bool
     {
-        if (is_array($v) && preg_match('/^[A-Za-z_]+[A-Za-z0-9_]*$/', $k)) {
+        if (is_array($v) && is_string($k) && preg_match('/^[A-Za-z_]+[A-Za-z0-9_]*$/', $k)) {
             $k = ($this->OPTIONS['CASELESS']) ? strtolower(trim($k)) : trim($k);
             $this->_arrvars[$k] = [];
             if ($this->OPTIONS['SET_LOOP_VAR'] && !empty($v)) $this->setVar($k, 1);
