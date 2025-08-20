@@ -160,6 +160,8 @@ class vlibTemplateCache extends vlibTemplate
         flock($f, 3); // UNlock file
         fclose($f);
         touch($cache_file);
+        chmod($cache_file, $this->OPTIONS['CACHE_CHMOD']);
+
         return true;
     }
 
