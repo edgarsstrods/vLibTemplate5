@@ -139,7 +139,7 @@ final class vlibIni
             // '/' or '\' off the end of the directory.
 
             'CACHE_LIFETIME' => 604800, // Duration until file is re-cached in seconds (604800 = 1 week)
-            'CACHE_CHMOD'    => 0775,
+            'CACHE_CHMOD'    => 0755,
 
             'CACHE_EXTENSION' => 'vtc', // extention to be used by the cached file i.e. index.php will become index.vtc (vlibTemplate Compiled)
 

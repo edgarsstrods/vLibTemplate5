@@ -189,7 +189,7 @@ class vlibTemplateCache extends vlibTemplate
             if ($type == 'dir') {
                 continue;
             } else {
-                $s = @mkdir($currpath, 0775);
+                $s = @mkdir($currpath, $this->OPTIONS['CACHE_CHMOD']);
                 if (!$s) vlibTemplateError::raiseError('VT_ERROR_CACHE_MKDIR_FAILURE', KILL, 'directory: ' . $currpath);
             }
         }
