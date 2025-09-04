@@ -210,7 +210,7 @@ class vlibTemplate
     {
         if (is_array($k)) {
             foreach ($k as $key => $value) {
-                $key = ($this->OPTIONS['CASELESS']) ? strtolower(trim($key)) : trim($key);
+                $key = ($this->OPTIONS['CASELESS']) ? strtolower(trim((string)$key)) : trim((string)$key);
                 if (preg_match('/^[A-Za-z_]+[A-Za-z0-9_]*$/', $key) && $value !== null) {
                     $this->_vars[$key] = $value;
                 }
